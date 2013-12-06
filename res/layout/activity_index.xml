@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    android:orientation="vertical"
+     >
+	
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_background" 
+        >
+        <TextView
+            android:text="诺恩办公"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            android:layout_centerInParent="true" 
+            />
+        
+        <TextView
+            android:id="@+id/zhuxiao"
+            android:text="注 销"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/common_btn_selector"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:onClick="btnClick"
+            android:padding="5dp"
+            android:layout_marginRight="10dp"
+            />
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:id="@+id/info"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/employee_info_panle"
+        android:gravity="center"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:padding="10dp"
+            >
+	        <ImageView
+	            android:id="@+id/headImg"
+	            android:layout_width="100dp"
+	            android:layout_height="100dp"
+	            android:layout_gravity="center"
+	            android:background="@drawable/head_phonex2"
+	            />
+            
+	        <LinearLayout
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1" 
+	            android:orientation="vertical"
+	            >
+	            <LinearLayout
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="20dp"
+	                >
+					<TextView
+					    android:id="@+id/realName"
+					    android:text="张三"
+					    android:textSize="20dp"
+					    android:textColor="#0066cc" 
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    />
+					<TextView
+					    android:text="  您好!"
+					    android:textSize="20dp"
+					    android:textColor="#0066cc" 
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    />	                
+	            </LinearLayout>
+	            	            <LinearLayout
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="20dp"
+	                >
+					<TextView
+					    android:text="部门: "
+					    android:textSize="20dp"
+					    android:textColor="#0066cc" 
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    />
+					<TextView
+					    android:id="@+id/departmentName"
+					    android:text="软件一部"
+					    android:textSize="20dp"
+					    android:textColor="#0066cc" 
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    />	                
+	            </LinearLayout>
+	                       	            <LinearLayout
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="20dp"
+	                >
+					<TextView
+					    android:text="职务: "
+					    android:textSize="20dp"
+					    android:textColor="#0066cc" 
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    />
+					<TextView
+					    android:id="@+id/dutyName"
+					    android:text="项目经理"
+					    android:textSize="20dp"
+					    android:textColor="#0066cc" 
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    />	                
+	            </LinearLayout>
+	        </LinearLayout>
+	        
+        </LinearLayout>
+    </LinearLayout>
+    
+        
+        <GridView
+            android:layout_below="@+id/info"
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="2"
+            android:listSelector="#00000000" 
+            android:gravity="center"
+            >
+            
+        </GridView>
+        
+
+</RelativeLayout>

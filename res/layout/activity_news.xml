@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff" >
+    
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_background" 
+        >
+        <TextView
+            android:text="诺恩新闻"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            android:layout_centerInParent="true" 
+            />
+        
+        
+                <TextView
+            android:id="@+id/back"
+            android:text="返 回"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/common_btn_selector"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:onClick="btnClick"
+            android:padding="5dp"
+            android:layout_marginRight="10dp"
+            />
+    </RelativeLayout>
+    
+        <com.chinaknown.nuoensys.pulldownlistview.PullDownRefreshView
+        android:id="@+id/pulldown_refreshview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/top" >
+
+        <ListView
+            android:id="@+id/pulldown_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="#dcdcdc"
+            android:dividerHeight="2dp"
+            android:listSelector="#00000000" >
+        </ListView>
+    </com.chinaknown.nuoensys.pulldownlistview.PullDownRefreshView>
+        <include
+        layout="@layout/loading_empty_view"
+        android:visibility="gone"
+        android:layout_below="@+id/top" />
+    <include layout="@layout/loading_prompt_layout"
+        android:layout_below="@+id/top" 
+        />
+</RelativeLayout>
