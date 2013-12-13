@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bill_bg_src"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/top_background" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="选择日期"
+            android:textColor="#ffffff"
+            android:textSize="25dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/timePicker1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingTop="10dp" >
+
+        <com.chinaknown.nuoensys.wheeldatepicker.WheelView
+            android:id="@+id/year"
+            android:layout_width="70dip"
+            android:layout_height="wrap_content" />
+
+        <com.chinaknown.nuoensys.wheeldatepicker.WheelView
+            android:id="@+id/month"
+            android:layout_width="51dip"
+            android:layout_height="wrap_content" />
+
+        <com.chinaknown.nuoensys.wheeldatepicker.WheelView
+            android:id="@+id/day"
+            android:layout_width="51dip"
+            android:layout_height="wrap_content" />
+
+        <com.chinaknown.nuoensys.wheeldatepicker.WheelView
+            android:id="@+id/hour"
+            android:layout_width="51dip"
+            android:layout_height="wrap_content" />
+
+        <com.chinaknown.nuoensys.wheeldatepicker.WheelView
+            android:id="@+id/mins"
+            android:layout_width="51dip"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/timePicker1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" 
+        >
+        
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:background="@drawable/send_reset_selector"
+            android:clickable="true" 
+            android:onClick="btnClick"
+            android:padding="5dp"
+            />
+        
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:id="@+id/sure"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确定"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:background="@drawable/send_reset_selector"
+            android:clickable="true" 
+            android:onClick="btnClick"
+            android:padding="5dp"
+            />
+        
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

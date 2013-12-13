@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/bill_bg_src">
+    
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bill_title_bar_bg"
+        >
+		<TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_centerInParent="true"
+		    android:text="编辑假条"
+		    android:textSize="30dp"
+		    android:textColor="#ffffff" 
+		    />        
+    </RelativeLayout>
+    
+    
+    <ScrollView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical" 
+           >
+           
+            <RelativeLayout
+            android:id="@+id/titlelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_top"
+            android:clickable="true"
+            android:onClick="btnClick" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40dp"
+                android:gravity="center"
+                android:text="假条标题"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+                        <TextView
+                android:id="@+id/title"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/leixingarrow"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:id="@+id/leixingarrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/ic_arrow_list" />
+        </RelativeLayout>
+           
+        <RelativeLayout
+            android:id="@+id/fromDatelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_middle"
+            android:clickable="true"
+            android:onClick="btnClick" 
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40dp"
+                android:gravity="center"
+                android:text="假  期  从"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+                        <TextView
+                android:id="@+id/fromDate"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/leixingarrow"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:id="@+id/leixingarrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/ic_arrow_list" />
+        </RelativeLayout>   
+        
+        <RelativeLayout
+            android:id="@+id/toDatelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_middle"
+            android:clickable="true"
+            android:onClick="btnClick"
+             >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40dp"
+                android:gravity="center"
+                android:text="假  期  到"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+                        <TextView
+                android:id="@+id/toDate"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/leixingarrow"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:id="@+id/leixingarrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/ic_arrow_list" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/totalDaysLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_middle"
+            android:clickable="true"
+            android:onClick="btnClick" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40dp"
+                android:gravity="center"
+                android:text="假  期  共"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+                        <TextView
+                android:id="@+id/totalDays"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/leixingarrow"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:id="@+id/leixingarrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/ic_arrow_list" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/reasonlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_middle"
+            android:clickable="true"
+            android:onClick="btnClick" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40dp"
+                android:gravity="center"
+                android:text="请假原因"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+                        <TextView
+                android:id="@+id/reason"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/leixingarrow"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:id="@+id/leixingarrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/ic_arrow_list" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/procelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_middle"
+            android:clickable="true"
+            android:onClick="btnClick" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40dp"
+                android:gravity="center"
+                android:text="申请流程"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+                        <TextView
+                android:id="@+id/proce"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/leixingarrow"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:id="@+id/leixingarrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/ic_arrow_list" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/proceExplanlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_bottom"
+            android:clickable="true"
+            android:onClick="btnClick" >
+
+            <TextView
+                android:id="@+id/titleTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40dp"
+                android:gravity="center"
+                android:text="流程示意"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+                        <TextView
+                android:id="@+id/proceExplan"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/leixingarrow"
+                android:gravity="right"
+                android:textColor="#000000"
+                android:textSize="18dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="20dp"
+                 />
+
+            <ImageView
+                android:id="@+id/leixingarrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/ic_arrow_list" />
+        </RelativeLayout>
+		</LinearLayout>        
+        
+        
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bill_title_bar_bg" 
+        android:gravity="center_vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1" 
+            >
+            <TextView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#ffffff"
+                android:clickable="true"
+                android:onClick="btnClick" 
+                android:gravity="center"
+                android:text="返回"
+                android:background="@drawable/back_yellow_selector"
+                />
+        </LinearLayout>
+                <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1" 
+            >
+            <TextView
+                android:id="@+id/send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#ffffff"
+                android:clickable="true"
+                android:onClick="btnClick" 
+                android:gravity="center"
+                android:text="发送"
+                android:background="@drawable/btn_yellow_selector"
+                />
+        </LinearLayout>
+                        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1" 
+            >
+            <TextView
+                android:id="@+id/reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#ffffff"
+                android:clickable="true"
+                android:onClick="btnClick" 
+                android:gravity="center"
+                android:text="重置"
+                android:background="@drawable/btn_yellow_selector"
+                />
+        </LinearLayout>
+                        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1" 
+            >
+            <TextView
+                android:id="@+id/rewrite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#ffffff"
+                android:clickable="true"
+                android:onClick="btnClick" 
+                android:gravity="center"
+                android:text="再写"
+                android:background="@drawable/btn_yellow_selector"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

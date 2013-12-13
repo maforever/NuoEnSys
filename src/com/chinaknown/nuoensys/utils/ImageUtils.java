@@ -47,7 +47,7 @@ public class ImageUtils {
 		ops.inJustDecodeBounds = true;
 		Bitmap bm = BitmapFactory.decodeStream(is);
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
-		bm.compress(CompressFormat.JPEG, 70, baos);
+		bm.compress(CompressFormat.JPEG, 80, baos);
 		try {
 //			bm = BitmapFactory.decodeStream(isBak,null,ops);
 			bm = BitmapFactory.decodeByteArray(baos.toByteArray(), 0, baos.toByteArray().length, ops);

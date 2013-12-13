@@ -5,10 +5,13 @@ import java.io.InputStream;
 
 import com.chinaknown.nuoensys.adapter.IndexGridViewAdapter;
 import com.chinaknown.nuoensys.model.Employee;
+import com.chinaknown.nuoensys.utils.AppSharedPreference;
 import com.chinaknown.nuoensys.utils.HttpUtils;
+import com.chinaknown.nuoensys.utils.MyApplication;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -21,6 +24,8 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +38,8 @@ public class AppIndexActivity extends Activity {
 	private int[] imageIds = {R.drawable.news, R.drawable.report, R.drawable.noteforleave, R.drawable.reimburesement, R.drawable.help, R.drawable.setting};
 	private String[] names = {"新闻","周报","请假条","报销单","帮助","设置"};
 	private Intent intent;
+	private AppSharedPreference asp;
+
 	File cache;      //图片缓存目录
 	private Handler handler = new Handler() {
 		public void handleMessage(android.os.Message msg) {
@@ -54,6 +61,7 @@ public class AppIndexActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		this.setContentView(R.layout.activity_index);
 		
+		asp = new AppSharedPreference(this);
 		employee = (Employee) this.getIntent().getSerializableExtra("employee");
 		
 		if(Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
@@ -101,8 +109,16 @@ public class AppIndexActivity extends Activity {
 					//新闻
 					intent = new Intent(AppIndexActivity.this, NewsIndexActivity.class);
 					break;
-
-				default:
+				case 1:
+					//周报
+					intent = new Intent(AppIndexActivity.this, ReportIndexActivity.class);
+					break;
+				case 2:
+					//请假条
+					intent = new Intent(AppIndexActivity.this, NoteForLeaveIndexActivity.class);
+					break;
+				case 5:
+					intent = new Intent(AppIndexActivity.this, SystemtSettingActivity.class);
 					break;
 				}
 				startActivity(intent);
@@ -123,6 +139,13 @@ public class AppIndexActivity extends Activity {
 	public void btnClick(View view) {
 		switch (view.getId()) {
 		case R.id.zhuxiao:
+//			asp.clearUserIdx();
+//			asp.clearUsername();
+//			asp.clearDepartment();
+//			asp.clearDuty();
+			
+			MyApplication myApp = (MyApplication) AppIndexActivity.this.getApplicationContext();
+			myApp.loginOut();
 			this.finish();
 			overridePendingTransition(R.anim.activity_steady, R.anim.activity_down);
 			break;

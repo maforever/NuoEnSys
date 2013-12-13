@@ -55,11 +55,23 @@
             android:listSelector="#00000000" >
         </ListView>
     </com.chinaknown.nuoensys.pulldownlistview.PullDownRefreshView>
-        <include
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_below="@+id/top" 
+	    >
+	            <include
         layout="@layout/loading_empty_view"
         android:visibility="gone"
         android:layout_below="@+id/top" />
+	</LinearLayout>
+		<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_below="@+id/top" 
+	    >
     <include layout="@layout/loading_prompt_layout"
         android:layout_below="@+id/top" 
         />
+    </LinearLayout>
 </RelativeLayout>

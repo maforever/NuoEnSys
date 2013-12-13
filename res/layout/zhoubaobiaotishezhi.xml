@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/xuanzheshoukuanren_backgroudn" >
+
+    <FrameLayout
+        android:id="@+id/slideout_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:id="@+id/top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:gravity="center" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_input_background" 
+                    >
+
+                    <TextView
+                        android:id="@+id/titleName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="填写周报标题"
+                        android:textColor="#000000"
+                        android:textSize="25dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/top"
+                android:layout_marginTop="30dp" 
+                android:layout_alignParentRight="true">
+
+                <EditText
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_alignParentRight="true" 
+                    android:singleLine="true"
+                    android:background="@drawable/edittext_input_background"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/slidedout_cover"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY" />
+
+</AbsoluteLayout>

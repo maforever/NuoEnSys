@@ -3,6 +3,8 @@ package com.chinaknown.nuoensys;
 import java.util.Timer;
 import java.util.TimerTask;
 import com.chinaknown.nuoensys.utils.AppSharedPreference;
+import com.chinaknown.nuoensys.utils.URLAddress;
+
 import android.os.Bundle;
 import android.os.Handler;
 import android.app.Activity;
@@ -23,6 +25,9 @@ public class WelcomeActivity extends Activity {
         	
         	appSp = new AppSharedPreference(WelcomeActivity.this);
         
+        	initBaseUrl(appSp);
+        	
+        	
      		Timer timer = new Timer();
      		TimerTask task = new TimerTask() {
 
@@ -32,6 +37,12 @@ public class WelcomeActivity extends Activity {
      			}
      		};
      		timer.schedule(task, 3000);
+    }
+    
+    private void initBaseUrl(AppSharedPreference appSp) {
+    	if(appSp.getBaseUrl() == null || "".equals(appSp.getBaseUrl())) {
+    		appSp.SetBaseUrl(URLAddress.BASIC_URL);
+    	}
     }
     
 	private void jump() {

@@ -4,6 +4,7 @@ import com.chinaknown.nuoensys.dialog.LoadingDialog;
 import com.chinaknown.nuoensys.model.Employee;
 import com.chinaknown.nuoensys.utils.AppSharedPreference;
 import com.chinaknown.nuoensys.utils.HttpUtils;
+import com.chinaknown.nuoensys.utils.MyApplication;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -55,6 +56,14 @@ public class LoginActivity extends Activity {
 					}else {
 						asp.setZiDongDengLu(false);
 					}
+					
+					
+//					asp.saveLoginUsername(result.getUsername());
+//					asp.saveLoginUserIdx(result.getUserid());
+//					asp.saveLoginDepartment(result.getDepartment());
+//					asp.saveLoginDuty(result.getDuty());
+					MyApplication mApp = (MyApplication) LoginActivity.this.getApplicationContext();
+					mApp.setLoginer(result);
 					
 					Intent intent = new Intent(LoginActivity.this, AppIndexActivity.class);
 					intent.putExtra("employee", result);

@@ -83,6 +83,102 @@ public class AppSharedPreference {
 		SharedPreferences sp = context.getSharedPreferences("app_info", Context.MODE_PRIVATE);
 		return sp.getString("password", "");
 	}
+	
+	/*设置系统基地址*/
+	public String getBaseUrl() {
+		SharedPreferences sp = context.getSharedPreferences("app_info", Context.MODE_PRIVATE);
+		return sp.getString("baseUrl", "");
+	}
+	
+	public void SetBaseUrl(String baseUrl) {
+		SharedPreferences sp = context.getSharedPreferences("app_info", Context.MODE_PRIVATE);
+		Editor editor = sp.edit();
+		editor.putString("baseUrl", baseUrl);
+		editor.commit();
+	}
+	
+	
+	/**
+	 * 用户登陆成功后将用户的username 与 idx保存
+	 * @param username
+	 */
+//	public void saveLoginUsername(String username) {
+//		SharedPreferences sp = context.getSharedPreferences("app_info", Context.MODE_PRIVATE);
+//		Editor editor = sp.edit();
+//		editor.putString("loginusername", username);
+//		editor.commit();
+//	}
+//	
+//	public void saveLoginUserIdx(Integer idx) {
+//		SharedPreferences sp = context.getSharedPreferences("app_info", Context.MODE_PRIVATE);
+//		Editor editor = sp.edit();
+//		editor.putInt("loginuseridx", idx);
+//		editor.commit();
+//	}
+//	
+//	public void clearUsername() {
+//		SharedPreferences sp = context.getSharedPreferences("app_info", Context.MODE_PRIVATE);
+//		Editor editor = sp.edit();
+//		editor.remove("loginusername");
+//		editor.commit();
+//	}
+//	
+//	public void clearUserIdx() {
+//		SharedPreferences sp = context.getSharedPreferences("app_info", Context.MODE_PRIVATE);
+//		Editor editor = sp.edit();
+//		editor.remove("loginuseridx");
+//		editor.commit();
+//	}
+//	
+//	public String getLoginUsername() {
+//		SharedPreferences sp = context.getSharedPreferences("app_info", Context.MODE_PRIVATE);
+//		return sp.getString("loginusername", "");
+//	}
+//	
+//	public Integer getLoginUserIdx() {
+//		SharedPreferences sp = context.getSharedPreferences("app_info", Context.MODE_PRIVATE);
+//		return sp.getInt("loginuseridx", 0);
+//	}
+//	
+//	public void saveLoginDepartment(String department) {
+//		SharedPreferences sp = context.getSharedPreferences("app_info", Context.MODE_PRIVATE);
+//		Editor editor = sp.edit();
+//		editor.putString("logindepartment", department);
+//		editor.commit();
+//	}
+//	
+//	public void saveLoginDuty(String duty) {
+//		SharedPreferences sp = context.getSharedPreferences("app_info", Context.MODE_PRIVATE);
+//		Editor editor = sp.edit();
+//		editor.putString("loginduty", duty);
+//		editor.commit();
+//	}
+//	
+//	public void clearDepartment() {
+//		SharedPreferences sp = context.getSharedPreferences("app_info", Context.MODE_PRIVATE);
+//		Editor editor = sp.edit();
+//		editor.remove("logindepartment");
+//		editor.commit();
+//	}
+//	
+//	public void clearDuty() {
+//		SharedPreferences sp = context.getSharedPreferences("app_info", Context.MODE_PRIVATE);
+//		Editor editor = sp.edit();
+//		editor.remove("loginduty");
+//		editor.commit();
+//	}
+//	
+//	public String getLoginDepartment() {
+//		SharedPreferences sp = context.getSharedPreferences("app_info", Context.MODE_PRIVATE);
+//		return sp.getString("logindepartment", "");
+//	}
+//	
+//	public Integer getLoginDuty() {
+//		SharedPreferences sp = context.getSharedPreferences("app_info", Context.MODE_PRIVATE);
+//		return sp.getInt("loginduty", 0);
+//	}
+	
+	
 }
 
 
